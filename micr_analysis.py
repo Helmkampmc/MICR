@@ -20,5 +20,4 @@ data = data[data["Agency"].str.contains("County") == False]
 
 data['Agency'] = data['Agency'].str.lstrip()
 data['Criminal Offense'] = data['Criminal Offense'].str.lstrip()
-desired_label = st.selectbox('Filter to:', [data['Agency']])
-st.write(data[data.label == desired_label])
+st.write(data)
