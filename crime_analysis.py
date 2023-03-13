@@ -19,7 +19,7 @@ filtered_df=filtered_df.groupby('MICR Offense').sum()
 
 # Display filtered data in Streamlit
 st.write(f'### Michigan Crime Data (2021) - {ori_selection}')
-st.write(filtered_df.style.set_table_styles([{'selector': 'thead', 'props': [('background-color', '#393939'), ('color', 'white')]}, {'selector': 'tbody', 'props': [('border-color', '#393939')]}]))
+st.write(filtered_df.style.set_table_styles([{'selector': 'thead', 'props': [('background-color', '#393939'), ('color', 'white')]}, {'selector': 'tbody', 'props': [('border-color', '#393939')]}]), full_width=True)
 
 
 
