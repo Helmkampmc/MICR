@@ -22,7 +22,7 @@ st.write(filtered_df)
 
 
 # Show bar chart of crime types for filtered data
-st.write(f'### Crimes by Type - {ori_selection}')
+st.write(f'### Top 5 Crimes- {ori_selection}')
 crime_counts = filtered_df
 crime_counts=crime_counts.nlargest(5, "Offenses")
 st.bar_chart(crime_counts)
