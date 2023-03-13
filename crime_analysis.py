@@ -9,7 +9,6 @@ df['ORI - Agency'] = df['ORI - Agency'].str.replace('Total', '')
 
 # Create dropdown for selecting ORI - Agency
 ori_list = df['ORI - Agency'].unique()
-ori_list = ori_list['ORI - Agency'].sorted()
 ori_selection = st.selectbox('Select an ORI - Agency:', ori_list)
 
 # Filter data based on ORI - Agency selection
