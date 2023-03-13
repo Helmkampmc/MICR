@@ -5,9 +5,11 @@ import pandas as pd
 
 df = pd.read_csv("mich_crime2021.csv")
 df=df.dropna()
+df['ORI - Agency'] = df['ORI - Agency'].str.replace('Total', '')
 
 # Create dropdown for selecting ORI - Agency
 ori_list = df['ORI - Agency'].unique()
+ori_list = df['ORI - Agency'].sorted()
 ori_selection = st.selectbox('Select an ORI - Agency:', ori_list)
 
 # Filter data based on ORI - Agency selection
