@@ -6,6 +6,8 @@ import pandas as pd
 df = pd.read_csv("mich_crime2021.csv")
 df=df.dropna()
 df['ORI - Agency'] = df['ORI - Agency'].str.replace('Total', '')
+df = df[df['ORI - Agency'].str.contains("MSP") == False]
+df = df[df['ORI - Agency'].str.contains("County") == False]
 
 # Create dropdown for selecting ORI - Agency
 ori_list = df['ORI - Agency'].unique()
