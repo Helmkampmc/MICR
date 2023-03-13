@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import plotly.express as px
 
 # Load data from GitHub
 
@@ -23,8 +24,6 @@ st.write(filtered_df)
 
 # Show bar chart of crime types for filtered data
 st.write(f'### Top 5 Crimes- {ori_selection}')
-crime_counts = filtered_df
-crime_counts=crime_counts.nlargest(5, "Offenses")
-st.bar_chart(crime_counts)
-
-
+crime_counts = filtered_df.nlargest(5, "Offenses")
+fig = px.pie(crime_counts, values='Offenses', names=crime_counts.index)
+st.plotly_chart(fig)
