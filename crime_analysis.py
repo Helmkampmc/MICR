@@ -28,4 +28,4 @@ crime_counts = filtered_df.nlargest(5, "Offenses")
 fig = px.pie(crime_counts, values='Offenses', names=crime_counts.index)
 st.plotly_chart(fig)
 
-st.write('2021 data is displayed as that is the most up-to-date publicly available Michigan crime data. Additional crime data can be found herehttps://www.michigan.gov/msp/divisions/cjic/micr/annual-reports')
+st.write('All data displayed is current as of 2021 as that is the most up-to-date publicly available Michigan crime data. Additional crime data can be found here: https://www.michigan.gov/msp/divisions/cjic/micr/annual-reports')
