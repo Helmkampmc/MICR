@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 
 # Read in the Michigan crime data
-df = pd.read_excel(Agency Crime Stats_2021.xlsx, skiprows=2, sheet_name='Table 7', header=[0,1,2])
+df = pd.read_excel("Agency Crime Stats_2021.xlsx", skiprows=2, sheet_name='Table 7', header=[0,1,2])
 
 # Rename columns for easier access
 df.columns = [f'{col[0]}_{col[1].replace(" ", "_")}_{col[2].replace(" ", "_")}' for col in df.columns]
