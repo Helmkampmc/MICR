@@ -23,7 +23,7 @@ st.write(filtered_df)
 
 
 # Show bar chart of crime types for filtered data
-st.write(f'### Top 5 Crimes- {ori_selection}')
+st.write(f'### Top 5 Crimes - {ori_selection}')
 crime_counts = filtered_df.nlargest(5, "Offenses")
 fig = px.pie(crime_counts, values='Offenses', names=crime_counts.index)
 st.plotly_chart(fig)
